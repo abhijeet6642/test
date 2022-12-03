@@ -2,71 +2,42 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
+    outline: none;
+
 }
 
 body{
-    font-family: arial;
-    background-color: #e6e6e6;
-    text-transform: uppercase;
-
-}
-
-.months{
-    background-color: #faeeee;
-    border: 1px solid #868484;
-}
-
-.months h1{
-    background-color: #868484;
-    color: #e6e6e6;
-    text-align: center;
-    padding: 5px;
-}
-
-header{
-    background-color: #868484;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-    border-bottom: 2px solid #e6e6e6;
-    
-}
-.calendar{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: space-evenly;
-}
-
-main{
-    margin-top: 110px;
-}
-
-.days,
-.dates{
+    height: 100vh;
     display: grid;
-    grid-template-columns: repeat(7 , 1fr);
-
-
+    place-items: center;
 }
 
-li{
-    background-color: #e6e6e6;
-    border: .5px solid #868484;
-    padding: 5px;
+.box{
+    font-weight: bolder;
+    font-size: 40px;
     text-align: center;
-    gap: 3px;
-    margin: 5px;
-}
-ul{
-    background-color: #e6e6e6;
-    border: .5px solid #868484;
-    padding: 5px;
-    text-align: center;
-    gap: 3px;
-    margin: 5px;
 }
 
+.box div:after{ 
+    content: "LIFESTYLE";
+    color: blue;
 
+    animation: text 3s ease-in forwards infinite;
+}
+
+@keyframes text{
+    0%{
+        content: "LIFESTYLE";
+        color: blue;
+    }
+  50%{
+   content:"WORK";
+    color: green;
+   }
+   100%{
+    content: "EVERYTHING";
+    color: red;
+   }
+
+}
